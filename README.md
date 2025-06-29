@@ -1,4 +1,47 @@
 
+# SeekHub Demo Web 项目
+
+这是一个全栈Web应用项目，包含React前端和Node.js后端，集成了Google Cloud服务。
+
+## 🚀 项目组成
+
+### 前端 (React + Vite)
+- ✅ React 19 + Vite 现代化构建
+- ✅ EN → 中文 翻译界面
+- ✅ 响应式设计
+- ✅ HMR 热重载开发
+
+### 后端 (Node.js + Express)
+- ✅ RESTful API 服务器
+- ✅ Google Cloud Translate API 集成
+- ✅ Google Cloud Storage 支持
+- ✅ CORS 跨域处理
+- ✅ 环境变量配置管理
+
+## 📁 项目结构
+
+```
+SeekHub_Demo_web/
+├── src/                    # React前端源码
+│   ├── App.jsx            # 主应用组件
+│   ├── App.css            # 应用样式
+│   ├── main.jsx           # 入口文件
+│   └── assets/            # 静态资源
+├── backend/               # Node.js后端
+│   ├── server.js          # 服务器主文件
+│   ├── package.json       # 后端依赖
+│   ├── README.md          # 后端详细文档
+│   └── config.example.env # 环境变量示例
+├── public/                # 公共静态文件
+├── package.json           # 前端依赖
+├── vite.config.js         # Vite配置
+└── README.md              # 项目总体说明
+```
+
+## ⚡ 快速启动
+
+### 前端启动 (React应用)
+
 ### Getting Started
 
 1. **Clone the repository**
@@ -26,6 +69,45 @@
 
 5. **Open your browser**
    Navigate to `http://localhost:5173` to view the application.
+
+### 后端启动 (Node.js API服务器)
+
+1. **进入后端目录**
+   ```bash
+   cd backend
+   ```
+
+2. **安装后端依赖**
+   ```bash
+   npm install
+   ```
+
+3. **配置Google Cloud (可选)**
+   
+   如需使用Google Cloud服务：
+   ```bash
+   # 复制环境变量模板
+   cp config.example.env .env
+   
+   # 编辑 .env 文件，填入你的Google Cloud配置
+   # GOOGLE_CLOUD_PROJECT_ID=your-project-id
+   # GOOGLE_CLOUD_KEY_FILE=./path/to/service-account-key.json
+   ```
+   
+   详细配置请参考：`backend/README.md`
+
+4. **启动后端服务器**
+   ```bash
+   npm start
+   ```
+   
+   后端服务器将运行在 `http://localhost:3001`
+
+### 🔗 服务连接
+
+- **前端地址**: http://localhost:5173
+- **后端地址**: http://localhost:3001  
+- **API健康检查**: http://localhost:3001/health
 
 ## 🎨 UI Customization Guide
 
